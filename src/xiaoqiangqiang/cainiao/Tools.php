@@ -41,17 +41,17 @@ class Tools
             "data_digest"=>$digest,
             "logistic_provider_id"=>$this->cpCode
         ];
-		$ch = curl_init();
-		curl_setopt($ch, CURLOPT_URL, $this->apiUrl);
-		curl_setopt($ch, CURLOPT_VERBOSE, 1);
-		curl_setopt($ch, CURLOPT_FAILONERROR, false);
-		curl_setopt($ch, CURLOPT_CUSTOMREQUEST, 'POST');
-		curl_setopt($ch, CURLOPT_RETURNTRANSFER, 1);
-		curl_setopt($ch, CURLOPT_HTTPHEADER, ['Content-Type:application/x-www-form-urlencoded']);
-		curl_setopt($ch, CURLOPT_POSTFIELDS, http_build_query($data));
-		$output = curl_exec($ch);
-		curl_close($ch);
-		echo $output;
-		return json_decode($output);
+        $ch = curl_init();
+        curl_setopt($ch, CURLOPT_URL, $this->apiUrl);
+        curl_setopt($ch, CURLOPT_VERBOSE, 1);
+        curl_setopt($ch, CURLOPT_FAILONERROR, false);
+        curl_setopt($ch, CURLOPT_CUSTOMREQUEST, 'POST');
+        curl_setopt($ch, CURLOPT_RETURNTRANSFER, 1);
+        curl_setopt($ch, CURLOPT_HTTPHEADER, ['Content-Type:application/x-www-form-urlencoded']);
+        curl_setopt($ch, CURLOPT_POSTFIELDS, http_build_query($data));
+        $output = curl_exec($ch);
+        curl_close($ch);
+        echo $output;
+        return json_decode($output);
 	}
 }
