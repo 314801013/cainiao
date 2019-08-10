@@ -1,0 +1,15 @@
+{
+    "name": "xiaoqiangqiang/cainiao",
+    "authors": [
+        {
+            "name": "xiaoqinagMac",
+            "email": "314801013@qq.com"
+        }
+    ],
+    "require": {},
+    "autoload": {
+        "psr-4": {
+            "xiaoqiangqiang\\cainiao\\": "src/xiaoqiangqiang/cainiao"
+        }
+    }
+}
